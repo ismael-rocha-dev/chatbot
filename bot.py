@@ -4,6 +4,7 @@ import os  # para lidar com diferentes sistemas operacionais
 import discord  # funções e classes para criar o bot
 from dotenv import load_dotenv  # para lidar com variáveis de ambiente
 import sys # para lidar com paths absolutos, nesse caso adicionar o caminho do ChatBot.py
+from discord.ext import commands
 
 chatbot_path = os.path.join(os.path.dirname(__file__), './python_chatbot/Chatbot')#pega o caminho do programa que responde as perguntas
 sys.path.append(chatbot_path)#adiciona a pasta do chatbot à variável path para  poder importar a função que responde as perguntas
@@ -19,7 +20,7 @@ intents.members = True
 
 # cria um objeto da classe discord.Client
 client = discord.Client(intents=intents)
-
+bot = commands.Bot(command_prefix='-')
 
 @client.event
 async def on_ready():
@@ -36,9 +37,12 @@ async def on_member_join(member):
 @client.event
 async def on_message(message):
     if message.author == client.user:
-        return
-
-    
+        return    
     await message.channel.send(chatbot_answer(message.content.lower()))
 
-client.run(TOKEN)  # roda o cliente com o token de acesso
+@bot.command(name='chat')
+async def default_command(ctx):
+    print(ctx.message)
+    await ctx.send('okay')
+
+bot.run(TOKEN)  # roda o cliente com o token de acesso
