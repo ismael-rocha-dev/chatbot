@@ -12,15 +12,15 @@ from ChatBot import chatbot_answer #importa o programa do chatbot que responde p
 
 load_dotenv()  # lê um arquivo .env e carrega as variáveis de ambiente dele
 TOKEN = os.getenv('DISCORD_TOKEN')  # pega o token de uma variável de ambiente
-GUILD = os.getenv('DISCORD_GUILD')  # pega o nome do servidor discord
+#GUILD = os.getenv('DISCORD_GUILD')  # pega o nome do servidor discord
 
 intents = discord.Intents.default()
 intents.members = True
 
 
 # cria um objeto da classe discord.Client
-client = discord.Client(intents=intents)
-bot = commands.Bot(command_prefix='-')
+client = discord.Client(intents=intents) #cria um cliente para lidar com eventos em um servidor
+bot = commands.Bot(command_prefix='-') #cria um "bot" para fazer coisas quando um comando é passado
 
 @client.event
 async def on_ready():
