@@ -12,18 +12,13 @@ import nltk
 # Essa função serve para reduzir a palavra a sua forma canonica.
 from nltk.stem.wordnet import WordNetLemmatizer
 
-# nltk.download('punkt', quiet=True)                            # Necessário para se instalar "punkt"
-# nltk.download('wordnet', quiet=True)                          # Necessário para se instalar "wordnet"
+nltk.download('punkt', quiet=True)                            # Necessário para se instalar "punkt"
+nltk.download('wordnet', quiet=True)                          # Necessário para se instalar "wordnet"
+nltk.download('omw-1.4')
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout  # """Bug""" resolvido instalando-se NVidia COPA (problema de GPU?)
 from tensorflow.keras.optimizers import SGD
-
-import ann_visualizer
-# Bibliotecas auxiliares para a construção do gráfico da rede neural
-from ann_visualizer.visualize import ann_viz
-import graphviz
-import pydot
 
 # Recebe a função para reduzir a palavra a sua forma canonica
 lematizador = WordNetLemmatizer()
@@ -139,9 +134,6 @@ treinar_x = list(treinamento[:, 0])
 # Objeto para treino dos dados da linha de saída
 treinar_y = list(treinamento[:, 1])
 
-# print(treinar_x) # Teste
-# print(treinar_y) # Teste
-# print(treinar_x[0]) # Teste
 
 # Simples modelo sequencial(???)
 modelo = Sequential()
@@ -170,5 +162,3 @@ modelo.save('Modelo_ChatBot.h5', hist)
 
 print('Treino Realizado!')
 
-# Para visualizar a rede neural (baixou-se Graphviz 2.38 no PATH)
-ann_viz(modelo, title='ChatBot Neural Network')

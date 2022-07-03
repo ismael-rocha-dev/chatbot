@@ -20,7 +20,7 @@ intents.members = True
 
 # cria um objeto da classe discord.Client
 client = discord.Client(intents=intents) #cria um cliente para lidar com eventos em um servidor
-bot = commands.Bot(command_prefix='-') #cria um "bot" para fazer coisas quando um comando é passado
+#bot = commands.Bot(command_prefix='-') #cria um "bot" para fazer coisas quando um comando é passado
 
 @client.event
 async def on_ready():
@@ -40,9 +40,11 @@ async def on_message(message):
         return    
     await message.channel.send(chatbot_answer(message.content.lower()))
 
-@bot.command(name='chat')
-async def default_command(ctx):
-    print(ctx.message)
-    await ctx.send('okay')
+# --------------- Comandos para o BOt -----------
+# @bot.command(name='chat')
+# async def default_command(ctx):
+#     print(ctx.message)
+#     await ctx.send('okay')
 
-bot.run(TOKEN)  # roda o cliente com o token de acesso
+#bot.run(TOKEN)  # roda o bot com o token de acesso
+client.run(TOKEN) # roda um cliente com o token de acesso
