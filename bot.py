@@ -11,7 +11,7 @@ sys.path.append(chatbot_path)#adiciona a pasta do chatbot à variável path para
 from ChatBot import chatbot_answer #importa o programa do chatbot que responde perguntas
 
 load_dotenv()  # lê um arquivo .env e carrega as variáveis de ambiente dele
-TOKEN = os.getenv('DISCORD_TOKEN')  # pega o token de uma variável de ambiente
+TOKEN = os.getenv('TOKEN')  # pega o token de uma variável de ambiente
 #GUILD = os.getenv('DISCORD_GUILD')  # pega o nome do servidor discord
 
 intents = discord.Intents.default()

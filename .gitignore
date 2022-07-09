@@ -1,2 +1,6 @@
 .env
 venv/
+python_chatbot/Modelo_ChatBot.h5
+python_chatbot/__pycache__/
+python_chatbot/classes.pkl
+python_chatbot/palavras.pkl
