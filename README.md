@@ -10,7 +10,7 @@ Este programa se comunica com a API do discord para bots. Para utilizá-lo, é n
 ## Configurações iniciais
 - [ ] Clone este repositório 
 - [ ] Crie um ambiente virtual para instalar as dependências desse projeto:
-    - [ ] Abra a linha de comando na pasta do seu projeto, digite **python -m venv venv**. Isso criará a pasta **venv** no seu projeto, ela é o seu ambiente virtual.
+    - [ ] Abra a linha de comando na pasta do seu projeto, digite ```**python -m venv venv**```. Isso criará a pasta **venv** no seu projeto, ela é o seu ambiente virtual.
     - [ ] Ative o seu ambiente com o comando **./venv/Scripts/activate**. Se tudo der certo você deve ver o nome **(venv)** no seu terminal.
 - [ ] Instale todas as dependências do projeto com o comando: **pip install -r requirements.txt**
 - [ ] Crie um arquivo **.env** e escreva nele **TOKEN=<O seu TOKEN>**. Copie o seu token do discord e    coloque ele no lugar de **<O seu TOKEN>** 
