@@ -3,8 +3,10 @@ def intents():
         
             {"tag": "Loop",
              "patterns": [""],
-             "responses": ["Desculpe, não entendi.", "Não sei muito sobre esse assunto, mas podemos falar sobre o raitec, o que acha?", 
-             "Interessante, mas ainda não tenho conhecimento sobre isso", "Não sei... Mudando de assunto, você gosta de tecnologia?"]
+             "responses": ["Desculpe, não entendi.", "Não sei muito sobre esse assunto, mas podemos falar sobre o raitec. Digite \"raitec\" se quiser falar sobre.", 
+             "Interessante, mas ainda não tenho conhecimento sobre isso", "Não sei... Mudando de assunto, vamos falar sobre tecnlogia. É só digitar \"tech\".",
+             "Perdão, mas ainda não aprendi sobre o que você falou, meus treinadores esqueceram de me contar sobre isso :(, quer falar sobre o raitec? digite \"raitec\".",
+             " \(*o*)/ Não consigo processar essa informação. Resetando... brincadeira, só não entendi o que você falou rsrs, fale sobre outro assunto por favor! :)"]
              },
         
             {"tag": "Saudar",
@@ -17,6 +19,11 @@ def intents():
              "patterns": ["Até mais", "Adeus", "Até logo", "Falou", "Foi bom te conhecer", "Tchau"],
              "responses": ["Até mais, volte sempre!", "Ahhh, sentirei sua falta...", "Prazer em conhecê-lo!", "Tchau Tchau!",
                           "Au revoir!"]
+             },
+
+             {"tag": "quem", #Ideia do dudu !!!!! Que fique claro a todos !!!!! para mais informações consultar Eduardo Vilas boas Ripas Simões 
+              "patterns": ["quem"],
+              "responses": ["te perguntou"]
              },
         
             {"tag": "Nome",
@@ -44,9 +51,9 @@ def intents():
              },
         
             {"tag": "RAITec",
-             "patterns": ["O que é o RAITec", "Quais os projetos do RAITec", "Quem são os membros do RAITec"],
+             "patterns": ["O que é o RAITec", "Quais os projetos do RAITec", "Quem são os membros do RAITec", "raitec"],
              "responses": ["Resumidamente, o RAITec é top. Você pode conhecer mais sobre ele clicando nesse link: (SITE)", 
-             "O Raitec é um projeto de extensão da Universidade Federal do Ceará criado em 2018.", "O RAITec é constituído por pessoas que tem sede de aprendizado e amam tecnologia."
+             "O Raitec é um projeto de extensão da Universidade Federal do Ceará criado em 2018.", "O RAITec é constituído por pessoas que tem sede de aprendizado e amam tecnologia.",
              "Esse projeto é muito bom, eles desenvolvem apps, sites, circuitos eletrônicos e muito mais. Sempre com o intuito de ensinar e aprender!"],
              },
     ]
