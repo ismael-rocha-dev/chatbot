@@ -1,8 +1,12 @@
+![image](https://github.com/ismaellimarocha23/chatbot/assets/39030764/70ebc3d3-db68-496a-b732-7e8a6fb34699)
+
+
 # Introdução
 
 Este programa é um bot para discord que conversa e responde perguntas básicas sobre o projeto RAITec. Feito utilizando redes neurais.
 
-# Setup
+
+# <img src="https://github.com/ismaellimarocha23/chatbot/assets/39030764/18ed6a3b-7c70-469c-bdfe-eb40d6380a5d" width="30"> Setup
 Este programa se comunica com a API do discord para bots. Para utilizá-lo, é necessário primeiro criar um bot com a sua conta do discord pelo link: https://discord/developers/applications
 
 ### Após criar o bot do discord e adicionar ele em um servidor, siga esses passos:
@@ -15,7 +19,7 @@ Este programa se comunica com a API do discord para bots. Para utilizá-lo, é n
 - [ ] Instale todas as dependências do projeto com o comando: ```pip install -r requirements.txt```
 - [ ] Crie um arquivo ```.env``` e escreva nele ```TOKEN=<O seu TOKEN>```. Copie o seu token do discord e    coloque ele no lugar de ```<O seu TOKEN>``` 
 
-## Treinamento do Chatbot
+## <img src="https://github.com/ismaellimarocha23/chatbot/assets/39030764/011a9e80-5ce5-4614-bc8f-86cd7b6da75e" width="30"> Treinamento do Chatbot
 Para utilizar o bot, primeiro é necessário treinar o bot com algumas perguntas e respostas prontas. Essas perguntas e respostas se encontram em ```./python_chatbot/Intents.py```. Esse arquivo contém um vetor de padrões que o Bot deve reconhecer, esses padrões seguem a estrutura:
 
 - ```tag```: é nome do conjunto pergunta/resposta. Você pode colocar qualquer nome, contanto que não já exista uma tag com o mesmo nome.
@@ -26,7 +30,7 @@ Modifique os intents se quiser mudar o comportamento do chatbot.
 
 - [ ] navegue para a pasta ```python_chatbot``` com o comando ```cd python_chatbot``` e execute o comando ```python ./chatbot_train.py```. Isso gerará outros arquivos necessários para o funcionamento do chatbot (```Sempre que mudar os intents é necessário rodar este comando novamente```).
 
-## Discord
+## <img src="https://github.com/ismaellimarocha23/chatbot/assets/39030764/515b0d46-b28c-4ca9-b445-b89ec14efa04" width="30"> Discord
 Agora o bot está pronto para rodar, execute o arquivo ```bot.py``` e então o seu programa deverá se comunicar com a API do discord e estar pronto para responder perguntas no servidor em que tiver sido adicionado.
 
 para se comunicar com o bot, digite em quaquer canal de texto o comando ```-chat``` seguido de uma frase que o bot ira responder.
